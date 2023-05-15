@@ -9,6 +9,9 @@
       "homepage": "https://github.com/cogentParadigm"
     }
   ],
+  "extra": {
+    "namespace": "Starbug\\Templates"
+  },
   "require": {
     "twig/twig": "~2.0"
   },
