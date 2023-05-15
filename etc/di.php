@@ -1,13 +1,15 @@
 <?php
 namespace Starbug\Templates;
 
+use function DI\add;
 use function DI\autowire;
-use function DI\factory;
 use Starbug\Templates\Twig\Factory;
 use Twig\Environment;
 
 return [
-  "template.helpers" => [],
+  "template.helpers" => add([]),
   TemplateInterface::class => autowire(TemplateRenderer::class),
-  Environment::class => factory([Factory::class, "createEnvironment"])
+  Environment::class => function (Factory $factory) {
+    return $factory->createEnvironment();
+  }
 ];

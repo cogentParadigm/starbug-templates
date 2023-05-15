@@ -19,10 +19,11 @@ class Factory {
     if (!is_object($loader)) {
       $loader = $this->createLoader();
     }
-    $twig = new Environment($loader, ['debug' => true, 'html_errors' => true, 'autoescape' => "name"]);
+    $twig = new Environment($loader, ['debug' => true, 'html_errors' => true, 'autoescape' => false]);
     $twig->addExtension(new StringLoaderExtension());
     $twig->addExtension(new DebugExtension());
     $twig->addExtension(new Extension($this->container));
+    return $twig;
   }
   public function createLoader(): LoaderInterface {
     $modules = array_reverse($this->container->get(Configuration::class)->getEnabled(), true);
