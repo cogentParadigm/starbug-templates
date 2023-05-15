@@ -1,0 +1,23 @@
+{
+  "name": "starbug/templates",
+  "type": "starbug-library",
+  "description": "A template rendering module for Starbug PHP framework integrating Twig.",
+  "license": "GPL-3.0-or-later",
+  "authors": [
+    {
+      "name": "Ali Gangji",
+      "homepage": "https://github.com/cogentParadigm"
+    }
+  ],
+  "require": {
+    "twig/twig": "~2.0"
+  },
+  "require-dev": {
+    "starbug/devel": "^1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Starbug\\Templates\\": "src/"
+    }
+  }
+}
