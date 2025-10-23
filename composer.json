@@ -13,7 +13,7 @@
     "namespace": "Starbug\\Templates"
   },
   "require": {
-    "twig/twig": "~2.0"
+    "twig/twig": "^3.0.0"
   },
   "require-dev": {
     "starbug/devel": "^1.0"
